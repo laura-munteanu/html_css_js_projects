@@ -47,6 +47,7 @@ img {
   padding: 0.5rem;
   cursor: pointer;
   width: 49.5%;
+  position: relative;
 }
 
 .btn:hover {
@@ -55,4 +56,21 @@ img {
 
 .btn:focus {
   outline: none;
+}
+
+button .circle {
+  position: absolute;
+  background-color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale .5s ease-out;
+}
+
+@keyframes scale {
+  to {
+  transform: translate(-50%, -50%) scale(2);
+  opacity: 0;
+  }
 }
