@@ -10,11 +10,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* align vertically */
   justify-content: center;
-  /* vh = viewport heiht => take up the entire height of the browser */
   height: 100vh;
-  /* don't want scrollbar to be seeing by defaulf  */
   overflow: hidden;
   margin: 0px;
 }
@@ -50,6 +47,5 @@ button .circle {
   to {
   transform: translate(-50%, -50%) scale(3);
   opacity: 0;
-
   }
 }
