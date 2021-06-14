@@ -11,10 +11,10 @@ const animated_bg_tests = document.querySelectorAll('.animated_bg_test');
 setTimeout(getData, 2500);
 
 function getData() {
-  header.innerHTML = '<img src="/images/amden.jpg" alt="Amden">';
+  header.innerHTML = '<img src="./images/amden.jpg" alt="Amden">';
   title.innerHTML = 'Lorem ipsum dolor sit amet.';
   excerpt.innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, id.';
-  profile_img.innerHTML = ' <img src="/images/profile_picture.png" alt="profile picture">';
+  profile_img.innerHTML = ' <img src="./images/profile_picture.png" alt="profile picture">';
   name.innerHTML = 'John Doe';
   date.innerHTML = 'Jun 11 2021';
 
