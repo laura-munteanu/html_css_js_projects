@@ -13,10 +13,9 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
-  background-image: url('./images/amden.jpg');
   background-position: center center;
   background-size: cover;
-  transition: 0.4s ease;
+  transition: 0.4s;
 }
 
 body::before{
@@ -54,7 +53,6 @@ body::before{
 .slide.active {
   opacity: 1;
 }
-
 
 .arrow {
   position: fixed;
