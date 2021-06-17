@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:300');
+@import url('https://fonts.googleapis.com/css?family=Heebo:300&display=swap');
 
 * {
   box-sizing: border-box;
@@ -67,6 +67,7 @@ body {
   height: 65px;
   width: 3px;
   transform-origin: bottom center;
+  transition: all 0,5s ease-in;
 }
 
 .needle.hour {
