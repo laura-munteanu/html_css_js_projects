@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:300&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --background-light-gradient: radial-gradient(circle 300px, red, yellow 10%, #1e90ff 50%, beige);
+  --background-dark-gradient: radial-gradient(circle 300px, #094f92, yellow 30%, #513745 50%, beige);
+}
+
+html {
+  transition: all 0.5s ease-in;
+}
+
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: #333;
+}
+
+html.dark {
+  background-color: #111;
+  color: var(--primary-color);
+}
+
+body {
+  font-family: 'Heebo', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.toggle {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 0;
+  border-radius: 4px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 50px;
+}
+
+.toggle:focus {
+  outline: none;
+}
+
+.clock-container {
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clock {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 10px solid #000;
+  background: var(--background-light-gradient);
+}
+
+.needle {
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 65px;
+  width: 3px;
+  transform-origin: bottom center;
+  transition: all 0,5s ease-in;
+}
+
+.needle.hour {
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.needle.minute {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+}
+
+.needle.second {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+  background-color: #e74c3c;
+}
+
+.center-point {
+  background-color: #e74c3c;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.center-point::after {
+  content: '';
+  background-color: var(--primary-color);
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.indicator div {
+  background-color: var(--primary-color);
+  position: absolute;
+  width: 3px;
+  height: 13px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.indicator div:nth-child(1) {
+  transform: rotate(30deg) translateY(-125px);
+}
+.indicator div:nth-child(2) {
+  transform: rotate(60deg) translateY(-125px);
+}
+.indicator div:nth-child(3) {
+  transform: rotate(90deg) translateY(-125px);
+  width: 4px;
+  height: 17px;
+}
+.indicator div:nth-child(4) {
+  transform: rotate(120deg) translateY(-125px);
+}
+.indicator div:nth-child(5) {
+  transform: rotate(150deg) translateY(-125px);
+}
+.indicator div:nth-child(6) {
+  transform: rotate(180deg) translateY(-125px);
+  width: 4px;
+  height: 17px;
+}
+.indicator div:nth-child(7) {
+  transform: rotate(210deg) translateY(-125px);
+}
+.indicator div:nth-child(8) {
+  transform: rotate(240deg) translateY(-125px);
+}
+.indicator div:nth-child(9) {
+  transform: rotate(270deg) translateY(-125px);
+  width: 4px;
+  height: 17px;
+}
+.indicator div:nth-child(10) {
+  transform: rotate(300deg) translateY(-125px);
+}
+.indicator div:nth-child(11) {
+  transform: rotate(330deg) translateY(-125px);
+}
+.indicator div:nth-child(12) {
+  transform: rotate(360deg) translateY(-125px);
+  width: 4px;
+  height: 17px;
+}
+
+.time {
+  font-size: 60px;
+}
+
+.date {
+  color: #aaa;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.date .circle {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 50px;
+  height: 18px;
+  width: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 18px;
+  transition: all 0.5s ease-in;
+  font-size: 12px;
+}
